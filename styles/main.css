@@ -1,11 +1,25 @@
-body, html {
+/*all browsers*/
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+
+  body, html {
     width: 100%;
     background-color:white;
   }
 
 .calculator {
-    margin : 0, auto;
-    border : green;
+    height: 350px;
+    width: 250px;
+    border : solid 2px grey;
+    display: block;
+    text-align: center;
+    margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .row {
@@ -22,4 +36,8 @@ body, html {
     border: 1px solid green;
 }
 
+input{
+    border-bottom: 3px;
+    margin-bottom: 18px;
+}
 
