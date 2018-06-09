@@ -30,6 +30,11 @@
     height: 60px;
 }
 
+.row button.delete{
+    color: firebrick;
+    font-weight: 600;
+}
+
 .row button {
     width: 39px;
     height: 30px;
