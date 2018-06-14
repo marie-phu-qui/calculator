@@ -32,6 +32,10 @@
 .row button.tall {
     height: 60px;
     border-radius: 9%;
+    float: right;
+    margin-top: 0.3%;
+    margin-right: 19%;
+    margin-left:  -17%;
 }
 
 .row button .btn-warning{
