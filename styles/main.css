@@ -28,6 +28,10 @@
 
 .row button.tall {
     height: 60px;
+    border-top-left-radius: 9%;
+    border-top-right-radius: 9%;
+    border-bottom-left-radius: 9%;
+    border-bottom-right-radius: 9%;
 }
 
 .row button.delete{
@@ -40,6 +44,10 @@
     height: 30px;
     border: 1px solid green;
     margin-bottom :1px;
+    border-top-left-radius: 15%;
+    border-top-right-radius: 15%;
+    border-bottom-left-radius: 15%;
+    border-bottom-right-radius: 15%;
 }
 
 input{
