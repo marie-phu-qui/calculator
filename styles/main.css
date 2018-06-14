@@ -51,6 +51,7 @@
     margin-bottom :1px;
     border-radius: 15%;
     box-shadow: 0 3px 9px 0 rgba(0,0,0,0.2), 0 6px 12px 0 rgba(0,0,0,0.10);
+    box-shadow: inset 0 1px 3px 0 rgba(0,0,0,0.2), 0 3px 9px 0 rgba(0,0,0,0.10)
     }
 
 .row button:hover{
@@ -58,8 +59,8 @@
 }
 
 .row button:active{
-    background-color: darkgrey;
-    box-shadow: inset 0 6px 12px 0 white, 0 9px 15px 0 whitesmoke;
+    background-color: rgb(180, 180, 180);
+    box-shadow: inset 0 3px 3px 0 rgb(215, 215, 215), 0 3px 3px 0 rgb(120, 120, 120);
     opacity: 3;
 }
 
