@@ -3,7 +3,7 @@ let screenDisplay = [];
 
 function displayNum(i){ 
     screenDisplay = document.getElementById("screen").value;
-    if (screenDisplay.length>18){
+    if (screenDisplay.length>16){
         sound();
     }
     else {
