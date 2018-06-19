@@ -13,5 +13,8 @@ function displayNum(i){
     
 // honk can't go further sound
 function sound(){
-    console.log("can't make this number longer")
+    screenDisplay = document.getElementById("screen");
+    console.log("can't make this number longer");
+    screenDisplay.style.backgroundColor="grey";
+    screenDisplay.style.color="red";
 }
