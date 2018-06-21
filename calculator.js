@@ -1,6 +1,14 @@
 let screenDisplay = [];
+let entries = [];
+let temp = "";
 let numOne = 0;
 let numTwo = 0;
+
+// make numOne the first number clicked before an operator class button
+// make numTwo the number clicked after an operator button
+// make the operation between the two equal temp
+// make temp appear on screen
+// make temp the new numOne 
 
 function displayNum(i){ 
     screenDisplay = document.getElementById("screen").value;
@@ -13,14 +21,16 @@ function displayNum(i){
     };
 
 function clearScreen(){
-    let numOne =document.getElementById("screen").value;
-    let screenDisplay = [];
+    numOne = document.getElementById("screen").value;
+    screenDisplay = [];
     document.getElementById("screen").value = screenDisplay;
 
 }
 
 function add(){
-    numOne + numOne;
+    clearScreen();
+    temp = Number(numOne) + Number(numTwo);
+    console.log(temp);
 }
 
 function minus(){
@@ -37,6 +47,13 @@ function divide(){
 
 function modulo(){
 
+}
+
+function equal(){
+    screenDisplay = document.getElementById("screen").value;
+    screenDisplay = temp;
+    numOne = temp;
+    console.log(temp);
 }
     
 // can't go further sound
