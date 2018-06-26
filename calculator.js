@@ -35,17 +35,31 @@ function clearScreen(){
     document.getElementById("screen").value = screenDisplay;
 }
 
+function allClear(){
+    screenDisplay = "";
+    document.getElementById("screen").value = screenDisplay;
+    temp ="";
+}
+
+function cancelLastEntry(){
+    temp = temp.split(" ");
+    temp = temp.slice(0, -1);
+    console.log(temp);
+    temp = temp.toString();
+    console.log(temp);
+    clearScreen();
+}
+
 function maths(i){
     temp += i;
     console.log(temp);
-
     clearScreen();
 }
 
 
 function equal(){
     document.getElementById("screen").value = eval(temp);
-    console.log(eval(temp));
+    console.log(temp);
 }
     
 // can't go further sound
