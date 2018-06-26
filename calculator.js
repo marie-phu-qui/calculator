@@ -1,11 +1,18 @@
-let screenDisplay = [];
+let screenDisplay ="";
 let entries = [];
 let temp = "";
-let numOne = 0;
-let numTwo = 0;
+
 
 // make numOne the first number clicked before an operator class button
 // make numTwo the number clicked after an operator button
+/*function defineNum(){
+    if(button clicked has class num){
+        make it be part of numOne;
+    }
+    else if(button clicked has class operator){
+        add operator to the temp;
+    }
+}*/
 // make the operation between the two equal temp
 // make temp appear on screen
 // make temp the new numOne 
@@ -17,43 +24,28 @@ function displayNum(i){
     }
     else{
         document.getElementById("screen").value += i ;
+        //entries.push(i);
+        temp += i;
+
     }
     };
 
 function clearScreen(){
-    numOne = document.getElementById("screen").value;
-    screenDisplay = [];
+    screenDisplay = "";
     document.getElementById("screen").value = screenDisplay;
-
 }
 
-function add(){
-    clearScreen();
-    temp = Number(numOne) + Number(numTwo);
+function maths(i){
+    temp += i;
     console.log(temp);
+
+    clearScreen();
 }
 
-function minus(){
-
-}
-
-function multiply(){
-
-}
-
-function divide(){
-
-}
-
-function modulo(){
-
-}
 
 function equal(){
-    screenDisplay = document.getElementById("screen").value;
-    screenDisplay = temp;
-    numOne = temp;
-    console.log(temp);
+    document.getElementById("screen").value = eval(temp);
+    console.log(eval(temp));
 }
     
 // can't go further sound
