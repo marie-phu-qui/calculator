@@ -1,5 +1,6 @@
 let screenDisplay ="";
 let temp = "";
+let calculation = "";
 
 function displayNum(i){ 
     screenDisplay = document.getElementById("screen").value;
@@ -52,6 +53,7 @@ function maths(i){
     clearScreen();
     temp += i;
     console.log(temp); 
+    document.getElementById("operator-in-use").innerHTML = i;
 }
 
 function equal(){

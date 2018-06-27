@@ -104,3 +104,11 @@ div.calculator div.type{
     margin-top: 6px;
 }
 
+div.operator div.operator-in-use{
+    height: 351px;
+    width: 249px;
+    display: block;
+    text-align: right;
+    background-color: aqua;
+    border: solid 30px aqua;
+}
