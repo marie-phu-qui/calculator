@@ -4,7 +4,10 @@ let entries = [];
 
 function displayNum(i){ 
     screenDisplay = document.getElementById("screen").value;
-    if(screenDisplay.length>16){
+    if (i== "." && screenDisplay.slice(-1)== "."){
+        stop();
+    }
+    else if(screenDisplay.length>16){
         stop();
     }
     // if last button clicked is equal, clear former screenDisplay and then add number;
@@ -13,7 +16,7 @@ function displayNum(i){
         temp += i;
         entries += i;
     }
-    };
+    }
 
 function clearScreen(){
     screenDisplay = "";
@@ -60,6 +63,8 @@ function equal(){
 function stop(){
     screenDisplay = document.getElementById("screen");
     console.log("can't make this number longer");
-    screenDisplay.style.backgroundColor="grey";
-    screenDisplay.style.color="red";
+    screenDisplay.classList.add("error");
+    setTimeout(function(){
+        screenDisplay.classList.remove("error");
+    }, 1000);
 }
