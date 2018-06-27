@@ -37,8 +37,8 @@ function cancelLastEntry(){
         temp = temp.slice(0, -1);
     }
     else {
-        temp = temp.slice(0, -screenDisplay.length);
         clearScreen();
+        temp = temp.slice(0, -screenDisplay.length);
     }
     console.log(temp);
 }
@@ -53,7 +53,6 @@ function maths(i){
     temp += i;
     console.log(temp); 
 }
-
 
 function equal(){
     screenDisplay = document.getElementById("screen");
