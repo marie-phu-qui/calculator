@@ -18,7 +18,7 @@
     border : solid 3px rgb(215, 215, 215);
     display: block;
     text-align: center;
-    margin-top: 90px;
+    margin-top: 15%;
     margin-left: auto;
     margin-right: auto;
     border-radius: 3%;
@@ -31,12 +31,13 @@
 }
 
 .row button.tall {
+    display: block;
     height: 60px;
     border-radius: 9%;
     float: right;
     margin-top: 0.3%;
-    margin-right: 19%;
-    margin-left:  -17%;
+    margin-right: 15.4%;
+    margin-left: -14%;
 }
 
 .row button .btn-warning{
@@ -104,11 +105,15 @@ div.calculator div.type{
     margin-top: 6px;
 }
 
-div.operator div.operator-in-use{
-    height: 351px;
-    width: 249px;
+div.operator div#operator-in-use{
     display: block;
-    text-align: right;
-    background-color: aqua;
-    border: solid 30px aqua;
+    float: right;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color:aqua;
+    text-align: center;
+    font-weight: 600;
+    font-size: 78px;
+    margin-top: 30%;
+    margin-left: auto;
+    margin-right: 15%;
 }

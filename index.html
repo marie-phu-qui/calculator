@@ -20,59 +20,64 @@
   
   <body>
     <div class="container-fluid">
-        <div class="col- 4 calculator">
-            <div class="row title">
-                <p>
-                    Marie's 
-                </p>
-            </div>
-            <div class="row type">
-                <p>
-                    simple web calculator
-                </p>
-            </div>
-            <div class="row">
-                <form>
-                    <input type="text" id="screen" value="" disabled><br>
-                </form>
-            </div>
-            <div class="row">
-                <button class="btn-danger" id="all-clear" onclick="allClear()">AC</button>
-                <button class="btn-danger" id="clear-last" onclick="cancelLastEntry()">CE</button>
-                <button class="operator" id="modulo" onclick="maths('%')">%</button>
-                <button class="operator" id="divide" onclick="maths('/')">÷</button>
-            </div>
-            <div class="row">
-                <button class="num" value="7" onclick="displayNum(7)">7</button>
-                <button class="num" value="8" onclick="displayNum(8)">8</button>
-                <button class="num" value="9" onclick="displayNum(9)">9</button>
-                <button class="operator" id="multiply" onclick="maths('*')">X</button>
-            </div>
-            <div class="row">
-                <button class="num" value="4" onclick="displayNum(4)">4</button>
-                <button class="num" value="5" onclick="displayNum(5)">5</button>
-                <button class="num" value+"6" onclick="displayNum(6)">6</button>
-                <button class="operator" id="minus" onclick="maths('-')">-</button>
-            </div>
-            <div class="row">
-                <button class="num" value="1" onclick="displayNum(1)">1</button>
-                <button class="num" value="2" onclick="displayNum(2)">2</button>
-                <button class="num" value="3" onclick="displayNum(3)">3</button>
-                <button class="tall operator" id="add" onclick="maths('+')">+</button>
-            </div>
-            <div class="row">
-                <button class="num" value="0" onclick="displayNum(0)">0</button>
-                <button class="text" value="." onclick="displayNum('.')">.</button>
-                <button class="operator" id="equal" onclick="equal()">=</button>
-            </div>
-        </div>
+        <div class="row">
 
-        <div class="col-4 operator">
-            <div id="operator-in-use">
-                <p>
-                    operation : 
-                </p>
+            <div class="col-sm-auto operator">
+                <div id="operator-in-use">
+                    <p>
+                     
+                    </p>
+                </div>
             </div>
-        </div>
 
+            <div class="col-lg-auto calculator">
+                <div class="row title">
+                    <p>
+                        Marie's 
+                    </p>
+                </div>
+                <div class="row type">
+                    <p>
+                        simple web calculator
+                    </p>
+                </div>
+                <div class="row">
+                    <form>
+                        <input type="text" id="screen" value="" disabled><br>
+                    </form>
+                </div>
+                <div class="row">
+                    <button class="btn-danger" id="all-clear" onclick="allClear()">AC</button>
+                    <button class="btn-danger" id="clear-last" onclick="cancelLastEntry()">CE</button>
+                    <button class="operator" id="modulo" onclick="maths('%')">%</button>
+                    <button class="operator" id="divide" onclick="maths('/')">÷</button>
+                </div>
+                <div class="row">
+                    <button class="num" value="7" onclick="displayNum(7)">7</button>
+                    <button class="num" value="8" onclick="displayNum(8)">8</button>
+                    <button class="num" value="9" onclick="displayNum(9)">9</button>
+                    <button class="operator" id="multiply" onclick="maths('*')">X</button>
+                </div>
+                <div class="row">
+                    <button class="num" value="4" onclick="displayNum(4)">4</button>
+                    <button class="num" value="5" onclick="displayNum(5)">5</button>
+                    <button class="num" value+"6" onclick="displayNum(6)">6</button>
+                    <button class="operator" id="minus" onclick="maths('-')">-</button>
+                </div>
+                <div class="row">
+                    <button class="num" value="1" onclick="displayNum(1)">1</button>
+                    <button class="num" value="2" onclick="displayNum(2)">2</button>
+                    <button class="num" value="3" onclick="displayNum(3)">3</button>
+                    <button class="tall operator" id="add" onclick="maths('+')">+</button>
+                </div>
+                <div class="row">
+                    <button class="num" value="0" onclick="displayNum(0)">0</button>
+                    <button class="text" value="." onclick="displayNum('.')">.</button>
+                    <button class="operator" id="equal" onclick="equal()">=</button>
+                </div>
+            </div>
+
+        </div>
     </div>
+
+</body>
