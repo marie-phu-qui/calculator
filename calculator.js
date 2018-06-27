@@ -3,13 +3,17 @@ let temp = "";
 
 function displayNum(i){ 
     screenDisplay = document.getElementById("screen").value;
+    // To ADD OPTION if last button clicked is equal, clear former screenDisplay and then add number;
+    if (document.getElementById("screen").classList.contains("result")){
+        allClear();
+        document.getElementById("screen").classList.remove("result");
+    };
     if (i== "." && screenDisplay.includes(".")){
         stop();
     }
     else if(screenDisplay.length>16){
         stop();
     }
-    // To ADD OPTION if last button clicked is equal, clear former screenDisplay and then add number;
     else{
         document.getElementById("screen").value += i ;
         temp += i;
@@ -47,13 +51,16 @@ function maths(i){
 
 
 function equal(){
-    document.getElementById("screen").value = eval(temp);
+    screenDisplay = document.getElementById("screen");
+    temp = eval(temp);
+    document.getElementById("screen").value = temp;
+    screenDisplay.classList.add("result");
     console.log(temp);
 }
     
 function stop(){
     screenDisplay = document.getElementById("screen");
-    console.log("can't make this number longer");
+    console.log("error");
     screenDisplay.classList.add("error");
     setTimeout(function(){
         screenDisplay.classList.remove("error");
