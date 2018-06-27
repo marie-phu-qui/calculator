@@ -1,6 +1,5 @@
 let screenDisplay ="";
 let temp = "";
-let entries = [];
 
 function displayNum(i){ 
     screenDisplay = document.getElementById("screen").value;
@@ -10,11 +9,10 @@ function displayNum(i){
     else if(screenDisplay.length>16){
         stop();
     }
-    // if last button clicked is equal, clear former screenDisplay and then add number;
+    // To ADD OPTION if last button clicked is equal, clear former screenDisplay and then add number;
     else{
         document.getElementById("screen").value += i ;
         temp += i;
-        entries += i;
     }
     }
 
@@ -31,24 +29,19 @@ function allClear(){
 
 function cancelLastEntry(){
     screenDisplay = document.getElementById("screen").value;
-    //if last char =NaN \".", erase last character;
     if (screenDisplay == ""){
         temp = temp.slice(0, -1);
     }
-    // if last char of the string ="num", erase all after the last NaN\"." char of the string;
     else {
-        let cancelledEntry = entries.pop();
-        entries.toString = temp;
+        temp = temp.slice(0, -screenDisplay.length);
         clearScreen();
     }
     console.log(temp);
-    //clearScreen();
 }
 
 function maths(i){
     clearScreen();
     temp += i;
-    entries += i;
     console.log(temp); 
 }
 
