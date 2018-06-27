@@ -4,7 +4,7 @@ let entries = [];
 
 function displayNum(i){ 
     screenDisplay = document.getElementById("screen").value;
-    if (i== "." && screenDisplay.slice(-1)== "."){
+    if (i== "." && screenDisplay.includes(".")){
         stop();
     }
     else if(screenDisplay.length>16){
@@ -20,7 +20,7 @@ function displayNum(i){
 
 function clearScreen(){
     screenDisplay = "";
-    screenDisplay = document.getElementById("screen").value;
+    document.getElementById("screen").value = screenDisplay;
 }
 
 function allClear(){
@@ -46,11 +46,10 @@ function cancelLastEntry(){
 }
 
 function maths(i){
+    clearScreen();
     temp += i;
     entries += i;
-    console.log(temp);
-    $("operator").last(clicked).css( "background-color", "red" );
-    clearScreen();
+    console.log(temp); 
 }
 
 
@@ -59,7 +58,6 @@ function equal(){
     console.log(temp);
 }
     
-// can't go further sound
 function stop(){
     screenDisplay = document.getElementById("screen");
     console.log("can't make this number longer");
