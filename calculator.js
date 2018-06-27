@@ -44,6 +44,11 @@ function cancelLastEntry(){
 }
 
 function maths(i){
+    screenDisplay =document.getElementById("screen");
+    if (document.getElementById("screen").classList.contains("result")){
+        temp = screenDisplay.value;
+        screenDisplay.classList.remove("result");
+    };
     clearScreen();
     temp += i;
     console.log(temp); 
