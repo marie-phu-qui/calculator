@@ -1,38 +1,23 @@
 let screenDisplay ="";
-let entries = [];
 let temp = "";
-
-
-// make numOne the first number clicked before an operator class button
-// make numTwo the number clicked after an operator button
-/*function defineNum(){
-    if(button clicked has class num){
-        make it be part of numOne;
-    }
-    else if(button clicked has class operator){
-        add operator to the temp;
-    }
-}*/
-// make the operation between the two equal temp
-// make temp appear on screen
-// make temp the new numOne 
+let entries = [];
 
 function displayNum(i){ 
     screenDisplay = document.getElementById("screen").value;
     if(screenDisplay.length>16){
         stop();
     }
+    // if last button clicked is equal, clear former screenDisplay and then add number;
     else{
         document.getElementById("screen").value += i ;
-        //entries.push(i);
         temp += i;
-
+        entries += i;
     }
     };
 
 function clearScreen(){
     screenDisplay = "";
-    document.getElementById("screen").value = screenDisplay;
+    screenDisplay = document.getElementById("screen").value;
 }
 
 function allClear(){
@@ -42,17 +27,26 @@ function allClear(){
 }
 
 function cancelLastEntry(){
-    temp = temp.split(" ");
-    temp = temp.slice(0, -1);
+    screenDisplay = document.getElementById("screen").value;
+    //if last char =NaN \".", erase last character;
+    if (screenDisplay == ""){
+        temp = temp.slice(0, -1);
+    }
+    // if last char of the string ="num", erase all after the last NaN\"." char of the string;
+    else {
+        let cancelledEntry = entries.pop();
+        entries.toString = temp;
+        clearScreen();
+    }
     console.log(temp);
-    temp = temp.toString();
-    console.log(temp);
-    clearScreen();
+    //clearScreen();
 }
 
 function maths(i){
     temp += i;
+    entries += i;
     console.log(temp);
+    $("operator").last(clicked).css( "background-color", "red" );
     clearScreen();
 }
 
