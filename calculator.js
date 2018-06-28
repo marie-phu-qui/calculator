@@ -5,10 +5,8 @@ let calculation = "";
 function displayNum(i){ 
     screenDisplay = document.getElementById("screen").value;
     checkForNewCalculation();
+    checkNumberSize();
     if (i== "." && screenDisplay.includes(".")){
-        stop();
-    }
-    else if(screenDisplay.length>16){
         stop();
     }
     else{
@@ -16,13 +14,13 @@ function displayNum(i){
         temp += i;
     }
     }
-/*
-function checkNumbersize(){
+
+function checkNumberSize(){
     screenDisplay = document.getElementById("screen").value;
-    if(screenDisplay.length>16){
+    if(screenDisplay.length>15){
         stop();
     }
-}*/
+}
 
 function checkForNewCalculation(){
     screenDisplay = document.getElementById("screen").value;
