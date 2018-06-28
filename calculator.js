@@ -2,22 +2,29 @@ let screenDisplay ="";
 let temp = "";
 let calculation = "";
 
-function displayNum(i){ 
-    screenDisplay = document.getElementById("screen").value;
+function clickNum(i){ 
     checkForNewCalculation();
     checkNumberSize();
-    if (i== "." && screenDisplay.includes(".")){
-        stop();
+    checkNumberDecimal();
+    displayNum();
     }
-    else{
-        document.getElementById("screen").value += i ;
-        temp += i;
-    }
+
+function displayNum(i){
+    screenDisplay = document.getElementById("screen").value;
+    screenDisplay += i ;
+    temp += i;
     }
 
 function checkNumberSize(){
     screenDisplay = document.getElementById("screen").value;
     if(screenDisplay.length>15){
+        stop();
+    }
+}
+
+function checkNumberDecimal(i){
+    screenDisplay = document.getElementById("screen").value;
+    if (i == "." && screenDisplay.includes(".")){
         stop();
     }
 }
