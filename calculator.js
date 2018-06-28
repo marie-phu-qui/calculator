@@ -5,13 +5,12 @@ let calculation = "";
 function clickNum(i){ 
     checkForNewCalculation();
     checkNumberSize();
-    checkNumberDecimal();
-    displayNum();
+    checkNumberDecimal(i);
+    displayNum(i);
     }
 
 function displayNum(i){
-    screenDisplay = document.getElementById("screen").value;
-    screenDisplay += i ;
+    document.getElementById("screen").value += i ;
     temp += i;
     }
 
