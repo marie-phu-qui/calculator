@@ -4,11 +4,7 @@ let calculation = "";
 
 function displayNum(i){ 
     screenDisplay = document.getElementById("screen").value;
-    // To ADD OPTION if last button clicked is equal, clear former screenDisplay and then add number;
-    if (document.getElementById("screen").classList.contains("result")){
-        allClear();
-        document.getElementById("screen").classList.remove("result");
-    };
+    checkForNewCalculation();
     if (i== "." && screenDisplay.includes(".")){
         stop();
     }
@@ -20,6 +16,21 @@ function displayNum(i){
         temp += i;
     }
     }
+/*
+function checkNumbersize(){
+    screenDisplay = document.getElementById("screen").value;
+    if(screenDisplay.length>16){
+        stop();
+    }
+}*/
+
+function checkForNewCalculation(){
+    screenDisplay = document.getElementById("screen").value;
+    if (document.getElementById("screen").classList.contains("result")){
+        allClear();
+        document.getElementById("screen").classList.remove("result");
+    };
+}
 
 function clearScreen(){
     screenDisplay = "";
@@ -41,7 +52,6 @@ function cancelLastEntry(){
         clearScreen();
         temp = temp.slice(0, -screenDisplay.length);
     }
-    console.log(temp);
 }
 
 function maths(i){
@@ -52,7 +62,6 @@ function maths(i){
     };
     clearScreen();
     temp += i;
-    console.log(temp); 
     document.getElementById("operator-in-use").innerHTML = i;
 }
 
@@ -61,12 +70,10 @@ function equal(){
     temp = eval(temp);
     document.getElementById("screen").value = temp;
     screenDisplay.classList.add("result");
-    console.log(temp);
 }
     
 function stop(){
     screenDisplay = document.getElementById("screen");
-    console.log("error");
     screenDisplay.classList.add("error");
     setTimeout(function(){
         screenDisplay.classList.remove("error");
